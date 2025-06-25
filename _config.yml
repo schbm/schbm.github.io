@@ -42,6 +42,14 @@ minimal_mistakes_skin : "dark"
 locale: "en-US"
 breadcrumbs: false
 enable_copy_code_button: true
+repository: "schbm/schbm.github.io"
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark"
+    issue_term: "pathname"
+    label: "comment" # Optional - must be existing label.
+
 
 author:
   name             : "Marcel Schubert"
@@ -197,7 +205,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
+      comments: true
       share: true
       related: true
   - scope:
