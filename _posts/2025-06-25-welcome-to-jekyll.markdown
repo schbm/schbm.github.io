@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Welcome to Jekyll!"
-date:   2025-06-25 11:11:31 +0200
+date:   2025-06-25 11:11:31 +0100
 categories: jekyll update
 toc: true
 ---
