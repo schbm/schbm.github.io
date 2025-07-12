@@ -6,53 +6,54 @@ toc: true
 ---
 
 # AI and Data Science
-- [Huggingface, The AI Community][hugging-face]
-- [Towards Data Science, Publication Platformn for DS, AI and ML][tds]
+- [Latent Space. AI Engineer Reading List][latent-space]
+- [Huggingface. The AI Community][hugging-face]
+- [Towards Data Science. Publication Platformn for DS, AI and ML][tds]
 - [Papers With Code][pwc]
     - ML
         - [I. Goodfellow et al., Deep Learning. Cambridge, MA, USA: MIT Press, 2016.][deep-learning-mit]
-        - [Youtube Channel of Artem Kirsanov, Computational Neuroscience and ML Topics][artem-kisanov]
-        - [EvidentlyAI, Guide to Classification Metrics][evai-guide]
+        - [Youtube Channel of Artem Kirsanov. Computational Neuroscience and ML Topics][artem-kisanov]
+        - [EvidentlyAI. Guide to Classification Metrics][evai-guide]
         - [J, Gareth, et al. An Introduction to Statistical Learning. Springer. 2023][intro-ml]
-        - [MIT 6.S191, Intro to DL][mit-dl]
+        - [MIT 6.S191. Intro to DL][mit-dl]
             - CNN
                 - [Jaon Brownlee. How To Visualize Feature Maps. Machine Learning Mastery][ml-brownlee]
 
 # Application Architecture
-- [arc42, Architecture Guidelines and Templates][arc42]
-- [Structurizr, Software Architecture Models as Code][structurizr]
-- [C4 Model, Architecture Abstraction Model][c4]
-- [MADR, Markdown Architectural Decision Records][madr]
+- [arc42. Architecture Guidelines and Templates][arc42]
+- [Structurizr. Software Architecture Models as Code][structurizr]
+- [C4 Model. Architecture Abstraction Model][c4]
+- [MADR. Markdown Architectural Decision Records][madr]
 - [Enterprise Integration Patterns by Gregor Hohpe and Kyle Brown][eip]
 - [DDD Agreggate Design Canvas][ddd-design-canvas]
 - [Catalog of Patterns of Enterprise Application Architecture (EAA) by Fowler][eaa]
-- [Context Mapper, Modeling Framework for Strategic DDD][contextmapper]
+- [Context Mapper. Modeling Framework for Strategic DDD][contextmapper]
 - [Olaf Zimmermann Blog][zio]
 - [Patterns for API Design][map]
 
 # DB
-- [PGTune, Postgres Configuration Tuner][pgtune]
-- [DB-Engines, DB Ranking][db-engines]
+- [PGTune. Postgres Configuration Tuner][pgtune]
+- [DB-Engines. DB Ranking][db-engines]
 - [SQL Island Learning Game][sql-island]
 
 # DS and Alg
-- [David Goldberg, What Every Computer Scientist Should Know About Floating-Point Arithmetic, Computing Suveas, 1991][dg]
-- [VISUALGO, Algorithms Visualized][visualgo]
-- [Toptal, Sorting Alg Animations][toptal-sort]
+- [David Goldberg. What Every Computer Scientist Should Know About Floating-Point Arithmetic, Computing Suveas, 1991][dg]
+- [VISUALGO. Algorithms Visualized][visualgo]
+- [Toptal. Sorting Alg Animations][toptal-sort]
 
 # Math
 - [Interactive Introduction to Fourier Transforms][jezzamon-fourier]
 - [3Blue1Brown][3blue1brown]
-- [Manim, Math Animation for Py][manim]
+- [Manim. Math Animation for Py][manim]
 
 # Misc
-- [DZone, Technical Cheat Sheets][dzone]
+- [DZone. Technical Cheat Sheets][dzone]
 - [Learning Roadmaps][learning-roadmaps]
 - [Setosa Misc Visual Explanations][setosa]
 
 # Plotting and Graphs
-- [Apache ECharts, Open Source JavaScript Visualization Library][apache-echarts]
-- [Recharts, A Composable Charting Library Built on React Components][recharts]
+- [Apache ECharts. Open Source JavaScript Visualization Library][apache-echarts]
+- [Recharts. A Composable Charting Library Built on React Components][recharts]
 - [Plantuml][plantuml]
 - The absolute G's: [Matplotlib][plot], [Seaborn][sb]
 
@@ -61,8 +62,8 @@ toc: true
 - [The G Marting Fowler][mfowler]
 
 # Systems
-- [OpenCSF, Book Webview of Breadth-first Overview of Concurrent Systems Architectures and Programming][opencsf]
-- [Nandgame, Build Basic Components Interactively][nandgame]
+- [OpenCSF. Book Webview of Breadth-first Overview of Concurrent Systems Architectures and Programming][opencsf]
+- [Nandgame. Build Basic Components Interactively][nandgame]
 
 [deep-learning-mit]: https://www.deeplearningbook.org/
 [apache-echarts]: https://echarts.apache.org/en/index.html
@@ -104,3 +105,4 @@ toc: true
 [nandgame]: https://nandgame.com/
 [toptal-sort]: https://www.toptal.com/developers/sorting-algorithms
 [pwc]: https://paperswithcode.com/
+[latent-space]: https://www.latent.space/p/2025-papers
