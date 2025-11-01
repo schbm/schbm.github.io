@@ -2,6 +2,7 @@
 layout: single
 title:  "Standardizing the Temporal Axis"
 date:   2025-10-31 17:00:00 +0100
+show_date: true
 categories: ds ml guide
 toc: false
 ---
@@ -56,5 +57,4 @@ $$
 Which means to plot the new function we can just calculate within this range.
 
 {% include scaled-curves.html %}
-* After Normalization
 

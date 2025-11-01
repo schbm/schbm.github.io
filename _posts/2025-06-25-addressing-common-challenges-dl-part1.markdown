@@ -2,6 +2,7 @@
 layout: single
 title:  "Addressing Common Challenges in Deep Learning: Part 1"
 date:   2025-06-25 20:00:00 +0100
+show_date: true
 categories: ds deep-learning guide
 tags: tensorflow
 toc: true
