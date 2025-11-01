@@ -3,7 +3,7 @@ layout: single
 title:  "Standardizing the Temporal Axis"
 date:   2025-10-31 17:00:00 +0100
 categories: ds ml guide
-toc: true
+toc: false
 ---
 
 As most machine learning practitioners know, a large part of the work in traditional ML doesn’t lie in the modeling itself, but in the preprocessing and feature engineering that come before it. One particularly tricky situation arises when dealing with wide-format experimental or process data where each test forms a row and each stage becomes its own column.
@@ -25,9 +25,9 @@ As the first step we can apply a nice thing called **domain-knowledge**.
 In our particular case I knew the individual tests could be modelled using exponential functions.
 But this does not solve the problem of variable length and the possibility of wildly different curve morphology.
 
-| ![Before Normalization](/assets/images/2025-10-31-standardization-of-temporal-axis\before-normalization.png) | 
-|:--:| 
-| Before normalization curves differ greatly. The colors depict the different test methodologies, both should elicit similar curves but in different x-axis units; Own Depiction |
+
+{% include curves.html %}
+* Before normalization curves differ greatly. The colors depict the different test methodologies, both should elicit similar curves but in different x-axis units.
 
 So why not impose more structure to the fitted parameters?
 The simplest method of solving this, is to normalize the axis in relative terms.
@@ -55,7 +55,6 @@ $$
 
 Which means to plot the new function we can just calculate within this range.
 
-| ![After Normalization](/assets/images/2025-10-31-standardization-of-temporal-axis\after_normalization.png) | 
-|:--:| 
-| After Normalization; Own Depiction |
+{% include scaled-curves.html %}
+* After Normalization
 
