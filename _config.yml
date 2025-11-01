@@ -38,7 +38,7 @@ after_footer_scripts:
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.27.1"
-minimal_mistakes_skin : "dark"
+minimal_mistakes_skin : "dirt"
 locale: "en-US"
 breadcrumbs: false
 enable_copy_code_button: false
