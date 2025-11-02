@@ -25,7 +25,7 @@ The components involved are illustrated in the following figure:
 ![ERC-4337](https://cdn.prod.website-files.com/66ec556d91c3ab378f61fadf/66ec55add0430f1f5803e751_641bcdb974e0977985f925dc_63f13a9ae1e45ac6b83ed3a6_components-erc-4337.svg)
 
 The proposal defines new signature interfaces for smart contracts:
-```
+```solidity
 function validateUserOp(
         PackedUserOperation calldata userOp,
         bytes32 userOpHash,
