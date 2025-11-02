@@ -147,7 +147,7 @@ function execute(address dest, uint256 value, bytes calldata func) external {
 }
 ```
 
-With this setupt one problem arise.
+With this setup one important problem arises.
 Suppose we have a function in our service where the original sender of the action is needed.
 How would we get his address?
 
