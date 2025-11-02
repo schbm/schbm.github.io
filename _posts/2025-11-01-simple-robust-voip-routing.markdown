@@ -4,7 +4,7 @@ title:  "Simple and Robust VoIP Routing (to Teams)"
 date:   2025-11-1 13:00:00 +0100
 show_date: true
 categories: system-engineering voip guide
-tags: voip sbc teams direct-routing
+tags: voip sbc teams direct-routing system-engineering
 toc: True
 ---
 

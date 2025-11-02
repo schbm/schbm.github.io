@@ -4,7 +4,7 @@ title:  "Docker Service Discovery with HAProxy"
 date:   2025-11-2 12:00:00 +0100
 show_date: true
 categories: devops guide
-tags: devops docker haproxy service-discovery dns
+tags: devops docker haproxy service-discovery dns system-engineering
 toc: True
 ---
 

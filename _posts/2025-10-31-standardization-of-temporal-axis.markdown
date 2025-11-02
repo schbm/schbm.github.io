@@ -4,6 +4,7 @@ title:  "Standardizing the Temporal Axis"
 date:   2025-10-31 17:00:00 +0100
 show_date: true
 categories: ds ml guide
+tags: ds ml guide normalization
 toc: false
 ---
 
