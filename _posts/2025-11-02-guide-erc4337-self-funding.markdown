@@ -19,11 +19,12 @@ This guide will show how to quickly spin up a contract prototype. Tho I will not
 which would be essential in a real life deployment scenario!
 
 # ERC-4337
-There exists much information about this specification, thus i only want to summarize it again:
-
+There is already extensive information available about this specification, so I will only provide a brief summary.
+ERC-4337 defines that user operations are processed off-chain by a bundler and, once validated, are submitted on-chain through an EntryPoint.
+The components involved are illustrated in the following figure:
 ![ERC-4337](https://cdn.prod.website-files.com/66ec556d91c3ab378f61fadf/66ec55add0430f1f5803e751_641bcdb974e0977985f925dc_63f13a9ae1e45ac6b83ed3a6_components-erc-4337.svg)
 
-ERC-4337 defines new signature interfaces for contracts:
+The proposal defines new signature interfaces for smart contracts:
 ```
 function validateUserOp(
         PackedUserOperation calldata userOp,
@@ -34,8 +35,8 @@ function validateUserOp(
 function execute(address dest, uint256 value, bytes calldata func) external {}
 ```
 
-As with previous cases, any contract implementing these functions is compatible with this standard.
-Within the infrastructure it works somehow like this:
+As in other proposals, any contract that implements these functions is compatible with the standard.
+Within the infrastructure, the process works roughly as follows:
 1. A user processes its task as an `UserOperation`, that includes about 14 additional fields specific to AA. The `UserOperation` is not yet submitted to Ethereum.
 2. The user signs it and passes it to a bundler. There are many bundlers like for example Alchemy or Pimlico. These typically provide RPC interfaces, which are often compatible with Viem.
 So not much modification is needed.
@@ -43,11 +44,11 @@ So not much modification is needed.
 4. The [EntryPoint](https://etherscan.io/address/0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108#code) then executes the Operations on the chain. The `UserOperation` is processed in 2 atomic steps: Validation via `validateUserOp()` and execution via `execute()`. There exist official EntryPoint contracts which can be found online.
 
 # Our Example Project
-So for our example we assume we already have an existing SmartContract for a voting service.
-Since there are many tutorials and guides surrounding this topic we want to impose some further requirements.
-- We now want to introduce account abstraction to handle gas sponsorship and in the future additional features.
-- We want to use only a single contract.
-- We do not want to use an external PayMaster.
+For our example, we assume an existing smart contract that provides a voting service.
+Because there are already many tutorials on basic voting contracts, we'll add extra constraints:
+- We will introduce ERC-4337 account abstraction to enable gas sponsorship now and support additional features later.
+- The design must use a single contract (no multi-contract architecture).
+- We will not rely on an external Paymaster.
 
 ## Implementation
 We start by importing the battle-tested OpenZeppelin definitions
@@ -199,9 +200,9 @@ function vote(uint256 pollId, uint256 optionIndex) public {
 Deploying the contract as-is can expose you to severe security risks.
 {: .notice--danger}
 
-And with this you're done. Now all thats left is the user facing application.
-Luckily much of the code can be simplified by using code supplied from Viem.
-For example by using the [BundlerClient](https://viem.sh/account-abstraction/clients/bundler) as an interface for ERC-4337 Bundlers:
+And that's it, the contract side is complete. The remaining work involves building the user-facing application.
+Fortunately, much of the implementation can be simplified by leveraging the utilities provided by Viem.
+For example by using the [BundlerClient](https://viem.sh/account-abstraction/clients/bundler) as a generic interface for Bundlers:
 ```javascript
 const client = createPublicClient({
   chain: mainnet,
