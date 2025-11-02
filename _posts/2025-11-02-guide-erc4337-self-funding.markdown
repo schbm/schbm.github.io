@@ -14,9 +14,8 @@ To improve UX many contract devs may want to use account-abstraction to enable f
 - Gas Sponsorship
 - and more...
 
-Within Ethereum the ERC-4337 standard defines the interface and the infrastructure needed to accomplish this.
-This guide will show how to quickly spin up a contract prototype. Tho I will not go into the details on the topics like authentication and authorization
-which would be essential in a real life deployment scenario!
+Within Ethereum, the ERC-4337 standard defines the interfaces and infrastructure required to achieve this functionality.
+This guide demonstrates how to quickly set up a contract prototype. However, it does not cover critical topics such as authentication and authorization, which are essential for any real-world deployment!
 
 # ERC-4337
 There is already extensive information available about this specification, so I will only provide a brief summary.
