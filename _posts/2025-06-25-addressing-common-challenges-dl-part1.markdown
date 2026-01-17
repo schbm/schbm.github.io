@@ -115,6 +115,15 @@ we can incorporate the norm calculation by inserting it in a training step.
 The monitoring of the curvature is not shown here, but would be straight forward by using the
 supplied functionality of Tensorflow. [^4] [^5]
 
+**Attention!**
+It is almost always practically unfeasable,
+to compute the Hessian once the model has a sufficiently large size.
+(e.g Gradient Vector has d values, Hessian Matrix $$ d \times d $$)
+There seems to be tricks in which one is able
+to calculate Hessian-Vector products $$ Hv $$,
+but i did not look further into that.
+{: .notice--danger}
+
 ## Counter Measures
 There is definetly not a "one-to-rule-them-all" solution.
 Monitoring the gradient norm is a good first step.
