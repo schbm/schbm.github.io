@@ -4,7 +4,7 @@ title:  "Ill-Conditioning in Linear Systems"
 date:   2026-01-17 12:00:00 +0100
 show_date: true
 categories: ds 
-tags: ds numerical-computation
+tags: ds numerical-computation numeric-linear-algebra ill-conditioning norms
 toc: true
 ---
 
