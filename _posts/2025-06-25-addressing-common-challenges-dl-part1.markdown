@@ -38,15 +38,26 @@ This can be simplified to the
 **(2)** Condition Number of Matrix [^1]
 
 $$ 
- k(A) = \frac{\sigma_{\text{max}}}{\sigma_{\text{min}}}
+ k_2(A) = \frac{\sigma_{\text{max}}}{\sigma_{\text{min}}}
 $$
 
-($$ \sigma $$ represents a singular value. Recall SVD! [^3])
+($$ \sigma $$ represents a singular values. Recall SVD! [^3])
+
+This is only true when the l2-norm is used and $$ A $$ must be invertible.
+The intuition here is, that the singular values given by SVD
+measure how much $$ A $$ stretches space. Their ratio tells you the distortion of the transformation.
+
 
 When $$ A $$ is diagonaziable and symmetric (Hermitian) then the condition number is also given as:
 
 $$
     k(A) = \frac{|\lambda_{\text{max}}|}{|\lambda_{\text{min}}|}
+$$
+
+A matrix $$ A $$ is Hermitian if:
+
+$$
+    A = A^*
 $$
 
 Ill conditioning is a very general problem, but it is prominent in gradient based optimization.
@@ -62,6 +73,7 @@ It is visible that only the first partial derivative dictates the direction of t
 To analyze this further we apply a Taylor approximation arount the current point $$ \boldsymbol{x}_0 $$ and for small $$ \epsilon $$:
 
 **(3)**
+
 $$
     f(x_0 - \epsilon \boldsymbol{g} ) \approx f(x_0) - \frac{1}{2} \boldsymbol{g}^T \boldsymbol{H} \boldsymbol{g} - \epsilon \boldsymbol{g}^T \boldsymbol{g}
 $$
@@ -148,6 +160,8 @@ Some simple suggestions that may help solving this issue are the following:
 - Cliffs
 - Long-Term Dependencies
 - (...)
+
+![Deep Learning](/assets/images/2026-01-17-ill-conditioning/deep-learning.jpeg)
 
 # Sources
 [^1]: [Applied & Computational Mathematics Emphasis, Conditioning and Stability](https://acme.byu.edu/00000179-aa18-d402-af7f-abf806b20000/conditioning2020-pdf#:~:text=A%20function%20with%20a%20large,produce%20large%20changes%20in%20output.)
