@@ -127,5 +127,25 @@ In the before mentioned post, we apply additional tricks
 because computing the inverse of $$ A $$ is infeasable for large $$ A $$.
 In deep learning most often $$ A $$ is huge.
 
+# Code
+
+{% highlight python %}
+    import numpy as np
+{% endhighlight %}
+
+{% highlight python %}
+    A = np.array([[1, 2],
+                [3, 4]])
+    cond_A = np.linalg.cond(A)
+    #np.linalg.cond(A, p=1)    # 1-norm
+    #np.linalg.cond(A, p=np.inf)  # infinity norm
+{% endhighlight %}
+
+{% highlight python %}
+    # Using SVD
+    U, s, Vt = np.linalg.svd(A)
+    cond_A = s[0] / s[-1]
+{% endhighlight %}
+
 ![Neural Activation](/assets/images/2026-01-17-ill-conditioning/neural-activation.jpg)
 
