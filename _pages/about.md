@@ -26,7 +26,6 @@ I am very passionate about learning.
 - Various Exercise Projects:
     - MNist with $$ >92\% $$ classification accuracy
     - CIFAR-10 with $$ >90\% $$ classification accuracy
-    - Animal Species Classification with $$ >80\% $$ classification accuracy
     - (...)
 
 # Education
