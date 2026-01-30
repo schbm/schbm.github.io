@@ -423,9 +423,9 @@ Although a network with three hidden units can form four linear regions, only th
 
 ![Not Activated Regions](/assets/images/2026-01-29-shallow-nn/not-activated.png)
 
-## In Multiple Dimensions TBD
+## In Multiple Dimensions
 
-For multivariate output function:
+For a multivariate output function (with ReLU):
 
 $$
   \begin{split}
@@ -434,12 +434,36 @@ $$
   \end{split}
 $$
 
-For the intuition above this will create two functions, where the joints of the
+The intuition can be extended as this will create two functions, where the joints of the
 linear regions coincide:
 
-![Joints](/assets/images/2026-01-29-shallow-nn/multivariate-output.png)
+
+
+| ![Joints](/assets/images/2026-01-29-shallow-nn/multivariate-output.png) | 
+|:--:| 
+| *Function with two outputs* The joints are shown using dashed lines, image from the book |
+
+For multiple inputs we may use:
+
+$$
+  \begin{split}
+      h_1 = a( \theta_{10}+ \theta_{11} x_1 + \theta_{12} x_2 ) \\
+      h_2 = a( \theta_{20}+ \theta_{21} x_1 + \theta_{22} x_2) \\
+      h_3 = a( \theta_{30}+ \theta_{31} x_1 + \theta_{32} x_2 )
+  \end{split}
+$$
+
+As the input dimensionality increases, a neural network with one hidden unit per input dimension can partition the input space into an exponentially growing number of linear regions. Specifically, one input dimension yields two regions separated by a single breakpoint, two input dimensions yield four regions formed by two dividing lines, and three input dimensions yield eight regions formed by three dividing planes. In general, with $$ D_i $$ input dimensions and $$ D_i $$ hidden units, the input space can be divided into $$ 2^{D_i} $$  linear regions.
+
+The linear regions of a shallow neural network (that uses piecewise linear activations) can be calculated by Zaslavsky's formula:
+
+
+$$
+  N = \sum_{j=0}^{D_i} \binom{H}{j}
+$$
+
+Where $$ D_i $$ inputs and $$ D $$ hidden units.
 
 <p></p>
-
 
 ![Shallow Water](/assets/images/2026-01-29-shallow-nn/shallow-water.jpg)
