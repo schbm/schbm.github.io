@@ -15,7 +15,7 @@ Stated by the [*Universal Approximation Theorem*](https://en.wikipedia.org/wiki/
 for any continuous function there exists a shallow network 
 that can approximate this function to any specified precision.
 
-That is for input $$ x \in \mathbb{R}^{D_i} $$ to output $$ y \in \mathbb{R}^{D_0} $$
+That is for input $$ x \in \mathbb{R}^{D_i} $$ to output $$ y \in \mathbb{R}^{D_o} $$
 using hidden units:
 
 $$
