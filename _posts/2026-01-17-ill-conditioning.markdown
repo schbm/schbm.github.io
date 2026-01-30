@@ -65,8 +65,7 @@ $$ k(A) $$ which is defined in  terms of norm.
 
 # Norm
 
-- A vector norm for column vector $$ x = [x_j] $$ with $$ n $$  components is a generalized length or distance
-denoted by $$ \Vert x \Vert $$
+- A vector norm for column vector $$ x = [x_j] $$ with $$ n $$  components is a generalized length or distance denoted by $$ \Vert x \Vert $$
 - [Good Guide on Norm](https://builtin.com/data-science/vector-norms)
 
 
